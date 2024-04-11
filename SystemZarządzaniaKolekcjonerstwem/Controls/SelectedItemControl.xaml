@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Models = "clr-namespace:SystemZarządzaniaKolekcjonerstwem.Models"
+             x:Class="SystemZarządzaniaKolekcjonerstwem.Controls.SelectedItemControl">
+    <ContentView.Resources>
+        
+        <ControlTemplate x:Key="SelectedItemControl">
+            <Border Style="{StaticResource BorderStyle}">
+                <Border.Triggers>
+                    <DataTrigger TargetType="Border"
+                                 Binding="{Binding Status}"
+                                 Value="Sprzedany">
+                        <Setter Property="BackgroundColor"
+                                Value="Gray" />
+                        <Setter Property="Stroke"
+                                Value="Black" />
+
+                    </DataTrigger>
+ 
+                </Border.Triggers>
+                <Grid ColumnDefinitions="*,*,*,*,*">
+
+                    <HorizontalStackLayout
+                        Grid.Column="0">
+                        <Label Text="Title: " />
+                        <Label Text="{TemplateBinding Title}"/>
+                    </HorizontalStackLayout>
+                                
+                    <HorizontalStackLayout
+                        Grid.Column="1">
+                        <Label Text="Price: " />
+                        <Label Text="{TemplateBinding Price}"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Grid.Column="2">
+                        <Label Text="Status: " />
+                        <Label Text="{TemplateBinding Status}" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Grid.Column="3">
+                        <Label Text="Rate: " />
+                        <Label Text="{TemplateBinding Rate}"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout
+                        Grid.Column="4">
+                        <Label Text="{TemplateBinding AdditionalName}"/>
+                        <Label Text=": "/>
+                        <Label Text="{TemplateBinding AdditionalValue}" />
+                    </HorizontalStackLayout>
+                                    
+                </Grid>
+            </Border>
+
+        </ControlTemplate>
+
+    </ContentView.Resources>
+</ContentView>
+

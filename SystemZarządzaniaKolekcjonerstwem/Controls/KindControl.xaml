@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemZarządzaniaKolekcjonerstwem.Controls.KindControl">
+    <ContentView.Resources>
+        <ControlTemplate x:Key="KindControlTemplate">
+            <Border Style="{StaticResource BorderStyle}">
+
+                <Grid ColumnDefinitions="*,*,*">
+                    <Label Text="{TemplateBinding Title}"
+                           TextColor="#731414"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       Grid.Column="0"/>
+                    <Grid Grid.Column="2"
+                          ColumnDefinitions="*,*">
+                        <Label Text="ILOSC PRZEDMIOTÓW"
+                               TextColor="#731414"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               Grid.Column="0"/>
+
+                        <Label Text="{TemplateBinding Appears}"
+                               HorizontalTextAlignment="Center"
+                               TextColor="#731414"
+                               VerticalTextAlignment="Center"
+                               Grid.Column = "1"
+                               />
+
+                    </Grid>
+
+                </Grid>
+
+            </Border>
+                    
+        </ControlTemplate>
+
+    </ContentView.Resources>
+</ContentView>
+

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemZarządzaniaKolekcjonerstwem.Views.SelectedItemInfo"
+             Title="{Binding selectedItem.Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Editor">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontFamily" Value="MainFont" />
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="PlaceholderColor" Value="#731414"/>
+                <Setter Property="TextColor" Value="#731414"/>
+
+            </Style>
+  
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+
+        <Grid RowDefinitions="50,*,100,*"
+              RowSpacing="50"
+              ColumnDefinitions="*,2*,*">
+            <Image Grid.Row="0" x:Name="image" />
+            <Grid Grid.Column="1"
+                  Grid.Row="1"
+                  RowDefinitions="*,*,*,*,*"
+                  RowSpacing="10">
+                <Border Grid.Row="0" Style="{StaticResource BorderStyle}">
+                    <Editor Placeholder="new Title"
+                            x:Name="editorTitle"
+                            Text="{Binding selectedItem.Title}"/>
+
+                </Border>
+
+                <Border Grid.Row="1" Style="{StaticResource BorderStyle}">
+                    <Editor Placeholder="new Status"
+                            x:Name="editorStatus"
+                            Text="{Binding selectedItem.Status}"/>
+
+                </Border>
+
+                <Border Grid.Row="2" Style="{StaticResource BorderStyle}">
+                    <Editor Placeholder="new Price"
+                            x:Name="editorPrice"
+                            Text="{Binding selectedItem.Price}"/>
+
+                </Border>
+
+                <Border Grid.Row="3" Style="{StaticResource BorderStyle}">
+                    <Editor Placeholder="new Rate"
+                            x:Name="editorRate"
+                            Text="{Binding selectedItem.Rate}"/>
+
+                </Border>
+
+                <Border Grid.Row="4" Style="{StaticResource BorderStyle}"
+                        x:Name="additionalField">
+                    <Editor Placeholder="{Binding selectedItem.AdditionalName}"
+                            x:Name="editorAdditionalValue"
+                            Text="{Binding selectedItem.AdditionalValue}"/>
+
+                </Border>
+               
+            </Grid>
+            <Button Text="Change"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Clicked="Change_Clicked"/>
+            
+        </Grid>
+</ContentPage>

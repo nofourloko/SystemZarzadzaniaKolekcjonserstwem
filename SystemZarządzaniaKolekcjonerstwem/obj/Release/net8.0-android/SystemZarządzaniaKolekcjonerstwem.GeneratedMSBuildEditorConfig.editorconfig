@@ -1,0 +1,77 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SystemZarządzaniaKolekcjonerstwem
+build_property.ProjectDir = /Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Controls/KindControl.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Controls.KindControl.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls/KindControl.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls/KindControl.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Controls/SelectedItemControl.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Controls.SelectedItemControl.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls/SelectedItemControl.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls/SelectedItemControl.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Views/CollectionSummaryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Views.CollectionSummaryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CollectionSummaryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CollectionSummaryPage.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/MainPage.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Views/SelectedItemInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Views.SelectedItemInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SelectedItemInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SelectedItemInfo.xaml
+
+[/Users/jakub/Projects/SystemZarządzaniaKolekcjonerstwem/SystemZarządzaniaKolekcjonerstwem/Views/SelectedKindList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SystemZarządzaniaKolekcjonerstwem.Views.SelectedKindList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SelectedKindList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SelectedKindList.xaml

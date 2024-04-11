@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemZarządzaniaKolekcjonerstwem.Views.MainPage"
+             xmlns:controls = "clr-namespace:SystemZarządzaniaKolekcjonerstwem.Controls"
+             Title="Home Page">
+
+    <Grid ColumnDefinitions="*,3*,*"
+          RowDefinitions="100, *, 70">
+        <Label Text="Lista kolekcji użytkownika : "
+               Grid.Row="0"
+               
+               TextColor="#F2DDD5"
+               HorizontalTextAlignment="Center"
+               FontSize="32"
+               VerticalTextAlignment="Center"
+               Grid.Column="1"/>
+        <ScrollView Grid.Column="1"
+                    Grid.Row="1">
+            <ListView ItemsSource="{Binding userCollectionHandler.collectionKinds}"
+                      ItemSelected="SelectedCollection"
+                      Margin="50"
+                      RowHeight="130"
+                      BackgroundColor="Transparent"
+                      SeparatorVisibility="None"
+                      x:Name="CollectionKidsList">
+               <ListView.ItemTemplate>
+                   <DataTemplate>
+                       <ViewCell>
+                           <Grid ColumnDefinitions="*,50">
+                                <controls:KindControl Grid.Column="0"
+                                                     Title="{Binding Kind}"
+                                                     Appears="{Binding Appears}"
+                                                     ControlTemplate="{StaticResource KindControlTemplate}"/>
+                                <Grid   Grid.Column="1"
+                                        RowDefinitions="*,*,*">
+                                    <Border Style="{StaticResource BorderStyle}"
+                                            Grid.Row="0">
+                                         <Button Text="X"
+                                                 Clicked="Button_DeleteCollection"
+                                            />
+                                    </Border>
+                                   
+
+                                </Grid>
+
+                           </Grid>
+                              
+                       </ViewCell>
+                       
+
+                   </DataTemplate>
+
+               </ListView.ItemTemplate>
+
+           </ListView>
+
+        </ScrollView>
+           
+        <Grid Grid.Row="2"
+              Margin="10"
+              Grid.Column="1"
+              ColumnSpacing="10"
+              ColumnDefinitions="*,*">
+            <Border Grid.Column="0"
+                     StrokeShape="RoundRectangle 10"
+                    Stroke="#F2DDD5">
+                <Editor  Placeholder="Collection name: "
+                         x:Name="collectionKindEditor"
+                        />
+            </Border>
+             
+              <Button Grid.Column="1"
+                      Text="Add new collection"
+                      Clicked="Button_Add_Kind"/>
+        </Grid>
+    </Grid>
+</ContentPage>

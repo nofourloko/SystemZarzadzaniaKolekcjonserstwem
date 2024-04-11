@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemZarządzaniaKolekcjonerstwem.Views.SelectedKindList"
+             xmlns:Models = "clr-namespace:SystemZarządzaniaKolekcjonerstwem.Models"
+             xmlns:controls = "clr-namespace:SystemZarządzaniaKolekcjonerstwem.Controls"
+             Title="{Binding Kind}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#731414"/>
+                <Setter Property="FontFamily" Value="MainFont" />
+            </Style>
+
+            <Style TargetType="HorizontalStackLayout">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    <Grid RowDefinitions="100,*,200"
+          Margin="10"
+          >
+        <Grid Grid.Row="0"
+              RowDefinitions="*,2*,*"
+              ColumnDefinitions="*,5*,*">
+            <Button Text="Generate summary page"
+                    Grid.Row="1"
+                    Clicked="GenerateSummaryPage"
+                Grid.Column="1"/>
+
+                <Grid RowDefinitions="*,*"
+                      x:Name="gridNewColumn"
+                      Grid.Row="1"
+                        Grid.Column="2"
+                      ColumnDefinitions="*,2*,*">
+                    <Editor Grid.Row="0"
+                            x:Name="editorColumn"
+                            Grid.Column="1"/>
+                    <Button Text="Add column"
+                            Grid.Column="1"
+                            Clicked="AddNewColumn"
+                            Grid.Row="1"/>
+                </Grid>
+
+
+        </Grid>
+        <ScrollView Grid.Row="1"
+                    Grid.Column="1">
+            <Grid ColumnDefinitions="*,5*,*">
+                <ListView ItemsSource="{Binding selectedCollectionList}"
+                          ItemSelected="ListView_ItemSelected"
+                          x:Name="collectionItemsListView"
+                          Grid.Column="1"
+                          SeparatorVisibility="None"
+                          RowHeight="100"
+                          >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*,10" Margin="10">
+                                <controls:SelectedItemControl   Title="{Binding Title}"
+                                                                AdditionalName="{Binding AdditionalName}"
+                                                                AdditionalValue="{Binding AdditionalValue}"
+                                                                Status="{Binding Status}"
+                                                                Price="{Binding Price}"
+                                                                Rate="{Binding Rate}"
+                                                                ControlTemplate="{StaticResource SelectedItemControl}"
+                                                                Grid.Column="0"/>
+
+                                <Button Text="{x:Static Models:Icons.deleteIcon}"
+                                        Style="{x:StaticResource Icons}"
+                                        TextColor="White"
+                                        Background="#731414"
+                                        VerticalOptions="StartAndExpand"
+                                        HorizontalOptions="EndAndExpand"
+                                        Clicked="DeleteItemFromCollection"
+                                        Grid.Column="1"/>
+
+                            </Grid>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            </Grid>
+            
+
+        </ScrollView>
+        <Grid Grid.Row="2"
+              Grid.Column="1"
+              Margin="10"
+              RowDefinitions="*,*,*">
+            <Label Text=""
+                   Grid.Row="0"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20"
+                   x:Name="warningLabel"/>
+            <Grid Grid.Row="1"
+                  ColumnDefinitions="*,*,*,*"
+                  Margin="10"
+                  ColumnSpacing="10">
+                <Border Grid.Column="0"
+                        StrokeShape="RoundRectangle 10"
+                        Stroke="#F2DDD5">
+                    <Editor Placeholder="Enter title:"
+                            x:Name="editorTitle"/>
+                </Border>
+
+                <Border Grid.Column="1"
+                        StrokeShape="RoundRectangle 10"
+                        Stroke="#F2DDD5">
+                    <Editor Placeholder="Enter Status:" Grid.Column="1"
+                            x:Name="editorStatus"/>
+                </Border>
+
+                <Border Grid.Column="2"
+                        StrokeShape="RoundRectangle 10"
+                        Stroke="#F2DDD5">
+                     <Editor Placeholder="Enter price:" Grid.Column="2"
+                             x:Name="editorPrice"/>
+                </Border>
+
+                <Border Grid.Column="3"
+                        StrokeShape="RoundRectangle 10"
+                        Stroke="#F2DDD5">
+                     <Editor Placeholder="Enter rate: 1 - 10" Grid.Column="2"
+                             x:Name="editorRate"/>
+                </Border>
+            </Grid>
+            <Button Grid.Row = "2"
+                    x:Name="buttonADD"
+                    Text="Add new item to the collection"
+                    Clicked="AddNewCollectionItem"/>
+              
+        </Grid>
+    </Grid>
+</ContentPage>
